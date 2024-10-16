@@ -1,7 +1,7 @@
 ---
 title: "simpleRegress"
-author: "put your name here"
-date: "Fall 2020"
+author: Sarah Castellon
+date: October 15 2024
 output: html_document
 ---
 
@@ -27,6 +27,70 @@ abline(simp)
 summary.lm(simp)
 ```
 
+The adjusted r square for the LENGTH~AGE is .07476
 
-## Compare all models that predict LENGTH other than NECK. Then order them from worst to best by its value of Adjusted-Rsquared (bigger is better), or by RSE (residual standard error) where smaller is better. 
+## Model LENGTH ~ AGE  this is an example  
+
+```{r}
+simp <- lm(LENGTH~AGE,data=bears)
+plot(LENGTH~AGE,data=bears)
+abline(simp)
+summary.lm(simp)
+```
+The adjusted r square for the LENGTH~AGE is .05073
+
+## Model LENGTH ~ HEADLEN  this is an example  
+
+```{r}
+simp <- lm(LENGTH~HEADLEN,data=bears)
+plot(LENGTH~HEADLEN,data=bears)
+abline(simp)
+summary.lm(simp)
+```
+The adjusted r square for the LENGTH~HEADLEN is 0.8434
+
+## Model LENGTH ~ HEADWTH  this is an example    
+
+```{r}
+simp <- lm(LENGTH~HEADWTH,data=bears)
+plot(LENGTH~HEADWTH,data=bears)
+abline(simp)
+summary.lm(simp)
+```
+
+The adjusted r square for the LENGTH~HEADWTH is 0.5321
+
+## Model LENGTH ~ CHEST this is an example  
+
+```{r}
+simp <- lm(LENGTH~CHEST,data=bears)
+plot(LENGTH~CHEST,data=bears)
+abline(simp)
+summary.lm(simp)
+```
+
+The adjusted r square for the LENGTH~CHEST is 0.7869
+
+## Model LENGTH ~ WEIGHTthis is an example  
+
+```{r}
+simp <- lm(LENGTH~WEIGHT,data=bears)
+plot(LENGTH~WEIGHT,data=bears)
+abline(simp)
+summary.lm(simp)
+```
+The adjusted r square for the LENGTH~WEIGHT is 0.7423.
+
+## Compare all models that predict LENGTH other than NECK. Then order them from worst to best by its value of Adjusted-Rsquared (bigger is better), or by RSE (residual standard error) where smaller is better.
+
+In comparison of all the models other then NECK from worst to best is as follows...  
+LENGTH~AGE r squared is 0.5073  
+LENGTH~HEADWTH r squared is 0.5321    
+LENGTH~WEIGHT r squared is 0.7423  
+LENGTH~CHEST r squared is 0.7869    
+LENGTH~HEADLEN r squared is 0.8434    
+
+
+
+
 
